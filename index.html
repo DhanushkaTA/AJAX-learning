@@ -87,7 +87,7 @@
       console.log(http.status," After sent text method invoked ", http.readyState);
 
       http.onreadystatechange = function (){
-          console.log(http.readyState,"Inside ready State change event");
+          console.log(http.readyState,"Inside ready State change event",http.responseText);
       }
 
       console.log("Request finished");

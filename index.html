@@ -72,22 +72,22 @@
       console.log("Request Start");
 
       var http=new XMLHttpRequest();
-      console.log(http.status," After create XMLHttpRequest Object ", http.readyState);
+      console.log(http.status," After create XMLHttpRequest Object ", http.readyState);//uninitialized
 
       // http.open("GET","k.html");
       // http.open("GET","https://www.ijse.lk/");
 
       http.open("GET","db/db.txt");
-      console.log(http.status," After open method invoked ", http.readyState);
+      console.log(http.status," After open method invoked ", http.readyState);//loading
 
       console.log(http.responseText);
-      console.log(http.status," After response text print ", http.readyState);
+      console.log(http.status," After response text print ", http.readyState);//loading
 
       http.send();
       console.log(http.status," After sent text method invoked ", http.readyState);
 
       http.onreadystatechange = function (){
-          console.log(http.readyState,"Inside ready State change event",http.responseText);
+          console.log(http.readyState,"Inside ready State change event",http.responseText);//loaded,interactive,complete
       }
 
       console.log("Request finished");

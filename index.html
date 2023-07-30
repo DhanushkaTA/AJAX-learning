@@ -52,6 +52,16 @@
             background-color: #6e6efa;
         }
 
+        body>div>div{
+            margin: auto;
+            padding: 10px;
+            border: 2px solid #48c74e;
+        }
+
+        p{
+            color: #4bd27b;
+        }
+
         h1{
             color: #00007c;
         }
@@ -63,6 +73,9 @@
     <h2>Sent Request using AJAX</h2>
     <h3>Let's implement the XMLHTTPRequest Object</h3>
     <button id="btn" type="button">sent a request</button>
+    <div>
+        <p id="content"></p>
+    </div>
 </div>
 
 <script src="assets/jquery/jquery-3.6.0.min.js"></script>
@@ -87,7 +100,13 @@
       console.log(http.status," After sent text method invoked ", http.readyState);
 
       http.onreadystatechange = function (){
-          console.log(http.readyState,"Inside ready State change event",http.responseText);//loaded,interactive,complete
+          // console.log("ready state : "+http.readyState," states : "+http.status," Inside ready State change event",http.responseText);//loaded,interactive,complete
+          if(http.readyState==4 && http.status== 200){
+              console.log("ready state : "+http.readyState," states : "+http.status," Inside ready State change event");//complete
+              console.log(http.responseText);
+              $('#content').text(http.responseText);
+          }
+
       }
 
       console.log("Request finished");

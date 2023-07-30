@@ -8,6 +8,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            overflow: hidden;
 
             width: 100vw;
             height: 100vh;
@@ -20,7 +21,7 @@
         body>div{
             border: 2px solid black;
             width: max-content;
-            height: 600px;
+            height: 500px;
             text-align: center;
             padding: 20px;
             border-radius: 20px;
@@ -84,6 +85,10 @@
 
       http.send();
       console.log(http.status," After sent text method invoked ", http.readyState);
+
+      http.onreadystatechange = function (){
+          console.log(http.readyState,"Inside ready State change event");
+      }
 
       console.log("Request finished");
   })

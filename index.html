@@ -71,8 +71,11 @@
     var http=new XMLHttpRequest();
     // http.open("GET","k.html");
     // http.open("GET","https://www.ijse.lk/");
-    http.open("GET","index.html");
+    //http.open("GET","index.html");
+    http.open("GET","db/db.txt");
     http.send();
+
+    console.log(http.responseText);
 
 
   })

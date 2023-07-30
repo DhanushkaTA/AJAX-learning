@@ -68,16 +68,24 @@
 <script>
   $('#btn').click(function (){
 
-    var http=new XMLHttpRequest();
-    // http.open("GET","k.html");
-    // http.open("GET","https://www.ijse.lk/");
-    //http.open("GET","index.html");
-    http.open("GET","db/db.txt");
-    http.send();
+      console.log("Request Start");
 
-    console.log(http.responseText);
+      var http=new XMLHttpRequest();
+      console.log(http.status," After create XMLHttpRequest Object ", http.readyState);
 
+      // http.open("GET","k.html");
+      // http.open("GET","https://www.ijse.lk/");
 
+      http.open("GET","db/db.txt");
+      console.log(http.status," After open method invoked ", http.readyState);
+
+      console.log(http.responseText);
+      console.log(http.status," After response text print ", http.readyState);
+
+      http.send();
+      console.log(http.status," After sent text method invoked ", http.readyState);
+
+      console.log("Request finished");
   })
 </script>
 </body>

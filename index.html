@@ -90,7 +90,7 @@
       // http.open("GET","k.html");
       // http.open("GET","https://www.ijse.lk/");
 
-      http.open("GET","db/db.txt");
+      http.open("GET","db/db.txt",false);//false = synchronous (blocking) || (default)true = asynchronous (unblocking)
       console.log(http.status," After open method invoked ", http.readyState);//loading
 
       console.log(http.responseText);
@@ -99,16 +99,17 @@
       http.send();
       console.log(http.status," After sent text method invoked ", http.readyState);
 
-      http.onreadystatechange = function (){
-          // console.log("ready state : "+http.readyState," states : "+http.status," Inside ready State change event",http.responseText);//loaded,interactive,complete
-          if(http.readyState==4 && http.status== 200){
-              console.log("ready state : "+http.readyState," states : "+http.status," Inside ready State change event");//complete
-              console.log(http.responseText);
-              $('#content').text(http.responseText);
-          }
+      // http.onreadystatechange = function (){
+      //     // console.log("ready state : "+http.readyState," states : "+http.status," Inside ready State change event",http.responseText);//loaded,interactive,complete
+      //     if(http.readyState==4 && http.status== 200){
+      //         console.log("ready state : "+http.readyState," states : "+http.status," Inside ready State change event");//complete
+      //         console.log(http.responseText);
+      //         $('#content').text(http.responseText);
+      //     }
+      //
+      // }
 
-      }
-
+      console.log(http.responseText);
       console.log("Request finished");
   })
 </script>

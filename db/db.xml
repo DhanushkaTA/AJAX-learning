@@ -1,0 +1,32 @@
+<customers>
+    <customer>
+        <id>C001</id>
+        <name>Tharindu</name>
+        <address>Mathara</address>
+        <salary>200000</salary>
+    </customer>
+    <customer>
+        <id>C002</id>
+        <name>Prasadini</name>
+        <address>Mathara</address>
+        <salary>300000</salary>
+    </customer>
+    <customer>
+        <id>C003</id>
+        <name>Saman</name>
+        <address>Galle</address>
+        <salary>400000</salary>
+    </customer>
+    <customer>
+        <id>C004</id>
+        <name>Udani</name>
+        <address>Panadura</address>
+        <salary>500000</salary>
+    </customer>
+    <customer>
+        <id>C005</id>
+        <name>Savindya</name>
+        <address>Galle</address>
+        <salary>60000</salary>
+    </customer>
+</customers>

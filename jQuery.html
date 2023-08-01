@@ -86,7 +86,16 @@
 
       $.ajax({
           url:"db/db.txt",
+          // async:false,//to synchronous
+          success:function (resp) {
+              console.log(resp);
+              $('#content').text(resp);
+          },
+          error:function (err) {
+              console.log(err);
+          }//to print error msg
       });
+
 
       console.log("Ended");
   })
